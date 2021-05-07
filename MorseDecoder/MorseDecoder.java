@@ -17,6 +17,14 @@ import java.util.Scanner;
 
 public class MorseDecoder {
 
+   public static void MorseDecoder() throws FileNotFoundException{
+   System.out.println("fuck");
+   		MorseTree<String> morseTree = loadTree(new File("morsecode.txt"));
+		File inputFile = new File(promptFilename("Enter an input filename:", true));
+		File outputFile = new File(promptFilename("Enter an output filename:", false));
+		decode(morseTree, inputFile, outputFile);
+      }
+
 	/**
 	 *
 	 * Main method of the program
