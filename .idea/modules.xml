@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/gay.iml" filepath="$PROJECT_DIR$/.idea/gay.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/stacheldraht.iml" filepath="$PROJECT_DIR$/.idea/stacheldraht.iml" group="stacheldraht" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/stacheldraht_test.iml" filepath="$PROJECT_DIR$/.idea/modules/stacheldraht_test.iml" group="stacheldraht" />
     </modules>
   </component>
 </project>

@@ -1,2 +1,2 @@
-# gay
+# bot.gay
 sfgzfg

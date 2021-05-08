@@ -13,7 +13,7 @@ dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.12'
     compile group: 'org.json', name: 'json', version: '20180813'
 }
-group 'DemiBOT-Live'
+group 'stacheldraht'
 version '1.0-SNAPSHOT'
 
 apply plugin: 'java'
@@ -22,7 +22,7 @@ sourceCompatibility = 1.8
 
 jar {
     manifest {
-        attributes("Manifest-Version": "1.0", "Main-Class": "Main");
+        attributes("Manifest-Version": "1.0", "bot.Main-Class": "bot.Main");
     }
 }
 
