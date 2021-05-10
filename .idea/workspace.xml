@@ -20,51 +20,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a26b586d-8fd5-41f9-99fe-5e9375622b01" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_code_findbugs_jsr305_3_0_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_neovisionaries_nv_websocket_client_2_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_squareup_okhttp3_okhttp_3_8_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_squareup_okio_okio_1_13_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__junit_junit_4_12.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__net_dv8tion_JDA_3_5_1_347.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__net_java_dev_jna_jna_4_4_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__net_sf_trove4j_trove4j_3_0_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_apache_commons_commons_collections4_4_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_hamcrest_hamcrest_core_1_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_json_json_20180813.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_slf4j_slf4j_api_1_7_25.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules/stacheldraht_main.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules/stacheldraht_test.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/stacheldraht.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/bot/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../DemiBOT-Live/DemiBOT/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../DemiBOT-Live/DemiBOT/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../DemiBOT-Live/DemiBOT/ffmpeg.exe" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../DemiBOT-Live/DemiBOT/ffprobe.exe" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../DemiBOT-Live/DemiBOT/nircmd.exe" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../DemiBOT-Live/DemiBOT/wget.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gay.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/gay/Main" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/gay/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/gay/ass" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/gay/morsecode" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/gay/shit" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MorseDecoder/MorseDecoder.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MorseDecoder/MorseTree.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MorseDecoder/decoded.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MorseDecoder/encoded.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gay.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/morsecode.txt" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -367,22 +327,22 @@
       <screen x="0" y="0" width="2560" height="1410" />
     </state>
     <state x="760" y="282" width="1040" height="849" key="#Project_Structure/0.0.2560.1410/2622.0.1858.1080/-1920.0.1858.1080@0.0.2560.1410" timestamp="1620445742271" />
-    <state width="2517" height="403" key="GridCell.Tab.0.bottom" timestamp="1620447417798">
+    <state width="2517" height="403" key="GridCell.Tab.0.bottom" timestamp="1620449525447">
       <screen x="0" y="0" width="2560" height="1410" />
     </state>
-    <state width="2517" height="403" key="GridCell.Tab.0.bottom/0.0.2560.1410/2622.0.1858.1080/-1920.0.1858.1080@0.0.2560.1410" timestamp="1620447417798" />
-    <state width="2517" height="403" key="GridCell.Tab.0.center" timestamp="1620447417798">
+    <state width="2517" height="403" key="GridCell.Tab.0.bottom/0.0.2560.1410/2622.0.1858.1080/-1920.0.1858.1080@0.0.2560.1410" timestamp="1620449525447" />
+    <state width="2517" height="403" key="GridCell.Tab.0.center" timestamp="1620449525447">
       <screen x="0" y="0" width="2560" height="1410" />
     </state>
-    <state width="2517" height="403" key="GridCell.Tab.0.center/0.0.2560.1410/2622.0.1858.1080/-1920.0.1858.1080@0.0.2560.1410" timestamp="1620447417798" />
-    <state width="2517" height="403" key="GridCell.Tab.0.left" timestamp="1620447417798">
+    <state width="2517" height="403" key="GridCell.Tab.0.center/0.0.2560.1410/2622.0.1858.1080/-1920.0.1858.1080@0.0.2560.1410" timestamp="1620449525447" />
+    <state width="2517" height="403" key="GridCell.Tab.0.left" timestamp="1620449525447">
       <screen x="0" y="0" width="2560" height="1410" />
     </state>
-    <state width="2517" height="403" key="GridCell.Tab.0.left/0.0.2560.1410/2622.0.1858.1080/-1920.0.1858.1080@0.0.2560.1410" timestamp="1620447417798" />
-    <state width="2517" height="403" key="GridCell.Tab.0.right" timestamp="1620447417798">
+    <state width="2517" height="403" key="GridCell.Tab.0.left/0.0.2560.1410/2622.0.1858.1080/-1920.0.1858.1080@0.0.2560.1410" timestamp="1620449525447" />
+    <state width="2517" height="403" key="GridCell.Tab.0.right" timestamp="1620449525447">
       <screen x="0" y="0" width="2560" height="1410" />
     </state>
-    <state width="2517" height="403" key="GridCell.Tab.0.right/0.0.2560.1410/2622.0.1858.1080/-1920.0.1858.1080@0.0.2560.1410" timestamp="1620447417798" />
+    <state width="2517" height="403" key="GridCell.Tab.0.right/0.0.2560.1410/2622.0.1858.1080/-1920.0.1858.1080@0.0.2560.1410" timestamp="1620449525447" />
     <state x="781" y="349" key="SettingsEditor" timestamp="1620445644654">
       <screen x="0" y="0" width="2560" height="1410" />
     </state>
