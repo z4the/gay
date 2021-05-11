@@ -1,10 +1,11 @@
 package bot;
 
 import bot.commands.Command;
-import net.dv8tion.jda.core.*;
-import net.dv8tion.jda.core.entities.*;
-import net.dv8tion.jda.core.events.message.MessageReceivedEvent;
-import net.dv8tion.jda.core.hooks.ListenerAdapter;
+import net.dv8tion.jda.api.*;
+import net.dv8tion.jda.api.entities.*;
+import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
+import net.dv8tion.jda.api.hooks.ListenerAdapter;
+//import net.dv8tion.jda.api.entities.Game;
 
 import javax.security.auth.login.LoginException;
 import java.io.FileNotFoundException;
@@ -14,7 +15,7 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.ThreadPoolExecutor;
 
 import static bot.Config.*;
-import static bot.SecurityUtils.*;
+//import static bot.SecurityUtils.*;
 
 
 public class Main {
@@ -46,17 +47,21 @@ public class Main {
         new CommandManager(debug);
 
         try {
-            jda = new JDABuilder(AccountType.BOT)
-                    .setToken(Config.getBotToken())
-                    .addEventListener(new MessageListener())
-                    .buildBlocking();
+            //jda = new JDABuilder(AccountType.BOT)
+             //       .setToken(Config.getBotToken())
+              //      .addEventListener(new MessageListener())
+               //     .buildBlocking();
+            //jda = JDABuilder.createDefault(Config.getBotToken()).build();
+            //jda.getPresence().setGame(Game.streaming("on " + System.getProperty("os.name"), "https://twitch.tv/loonatricks"));
+            JDA jda = JDABuilder.createDefault(Config.getBotToken()).addEventListeners(new MessageListener()).build();
+            //jda.addEventListener(new MessageListener());
+
+            System.out.println("load");
         } catch (LoginException e) {
-            e.printStackTrace();
-        } catch (InterruptedException e) {
+            System.out.println("fail");
             e.printStackTrace();
         }
         System.out.println("Connected");
-        jda.getPresence().setGame(Game.streaming("on " + System.getProperty("os.name"), "https://twitch.tv/loonatricks"));
         //jda.getPresence().setStatus(OnlineStatus.DO_NOT_DISTURB);
     }
 }
@@ -86,47 +91,23 @@ class MessageListener extends ListenerAdapter {
     public void onMessageReceived(MessageReceivedEvent event) {
         User author = event.getAuthor();
         Guild guild = event.getGuild();
-        Channel channel = event.getTextChannel();
+        TextChannel  channel = event.getTextChannel();
         List<Role> role = guild.getRoles();
         //System.out.println("roles : " + Arrays.asList(role));
-        PrivateChannel privateChannel = event.getPrivateChannel();
+        //PrivateChannel privateChannel = event.getPrivateChannel();
 
-        if(Config.isDebugMode()) {
-            if(!isOwner(author)) {
-                System.out.println("TRUSTED? " + author + " " + isTrustedUser(author));
-                return;
-            }
-            try {
-                if (privateChannel.getType().toString().equals("PRIVATE")) {
-                    System.out.println("Channel Type: " + privateChannel.getType());
-                    return;
-                }
-            } catch(NullPointerException e) {
 
-            }
-/*
-            System.out.println("Channel Type: " + channel.getType());
-            System.out.println("CHANNEL TRUSTED?: " + isTrustedChannel(channel));
-            System.out.println("AUTHOR? " + author + " " + isOwner(author));
-            System.out.println("SERVER TRUSTED? " + guild + " " + isTrustedServer(guild));
-*/            //System.out.println("ROLE TRUSTED? " + isTrustedRole(role) );
-        }
-        if (!isTrustedServer(guild)) {
-            return;
-        }
-        if (!isTrustedChannel(channel)) {
-            return;
-        }
-        if (!isTrustedUser(author) && !isOwner(author)) {
-            return;
-        }
+
         if (author.isBot() || !event.isFromType(ChannelType.TEXT)) {
             return;
         }
 
         String msg = event.getMessage().getContentRaw();
+        System.out.println(msg);
+
 
         if (!msg.startsWith(Config.getPrefix())) {
+            System.out.println("not prefix");
             return;
         }
 

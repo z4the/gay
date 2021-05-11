@@ -8,12 +8,10 @@ import java.util.Map;
 public class CommandManager {
     private static Map<String, Command> commands = new HashMap<String, Command>();
     static {
-        addCommand("ss", new ScreenshotCommand());
-        addCommand("upload", new UploadCommand());
-        addCommand("rs", new RecordCommand());
-        addCommand("run", new RunCommand());
-        addCommand("cmd", new CmdCommand());
+
         addCommand("ping", new PingCommand());
+        addCommand("test", new TestCommand());
+        /*
         addCommand("leftclick", new LeftClickCommand());
         addCommand("doubleleftclick", new LeftClickCommand(true));
         addCommand("dlc", new LeftClickCommand(true));
@@ -36,14 +34,16 @@ public class CommandManager {
         addCommand("h", new HelpCommand());
         addCommand("wget", new WGetCommand());
         addCommand("setstatus", new StatusCommand());
+        */
+        //addCommand("ss", new ScreenshotCommand());
+        //addCommand("upload", new UploadCommand());
+        //addCommand("rs", new RecordCommand());
+        //addCommand("run", new RunCommand());
+        //addCommand("cmd", new CmdCommand());
+
         //addCommand("chava", new AvatarCommand());
         //addCommand("gitpush", new );
-        addCommand("chava", new AvatarCommand()); //bot.gay boy dun work
-        try {
-            addCommand("sysinfo", new SInfoCommand());
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+
     }
 
     public CommandManager(boolean debug) {
