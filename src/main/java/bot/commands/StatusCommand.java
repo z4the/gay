@@ -4,7 +4,7 @@ import net.dv8tion.jda.core.entities.Game;
 import net.dv8tion.jda.core.events.message.MessageReceivedEvent;
 import java.util.List;
 
-import static pro.loonatic.demibot.Main.jda;
+import static bot.Main.jda;
 
 public class StatusCommand implements Command {
     public void process(MessageReceivedEvent event, List<String> args) throws Exception {
