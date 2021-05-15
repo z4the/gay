@@ -230,20 +230,7 @@ public class CommandUtils {
         return exists;
     }
 
-    public static void wGet(List<String> args) {
-        ArrayList<String> command = new ArrayList<>();
-        String link = args.toString();
-        link = link.substring(1, link.length()-1);
-        command.add("cmd.exe");
-        command.add("/c");
-        command.add("wget");
-        command.add("/P");
-        command.add(link);
-        System.out.println(link);
-        command.add(String.format("\"%s\"", Config.getDirectFolder("downloads")));
-        System.out.println(command);
-        ProcessBuilder pb = new ProcessBuilder(command);
-    }
+
 /*
 shell.exec(`wget ${args} -P "./Downloads/"`, (error, complete) => {
                           if (error && (isLinux || isDarwin)) {
@@ -255,102 +242,6 @@ shell.exec(`wget ${args} -P "./Downloads/"`, (error, complete) => {
                           }
  */
 
-    public static int getKeyCode(String str) { // JESUS FUCKING CHRIST DISYER
-        str = str.toLowerCase();
-
-        switch (str) {
-            case "lalt":
-            case "alt":
-                return KeyEvent.VK_ALT;
-            case "ralt":
-            case "altgr":
-                return KeyEvent.VK_ALT_GRAPH;
-            case "lshift":
-            case "rshift":
-            case "shift":
-                return KeyEvent.VK_SHIFT;
-            case "lctrl":
-            case "rctrl":
-            case "ctrl":
-                return KeyEvent.VK_CONTROL;
-            case "lwin":
-            case "rwin":
-            case "win":
-                return KeyEvent.VK_WINDOWS;
-            case "home":
-                return KeyEvent.VK_HOME;
-            case "insert":
-                return KeyEvent.VK_INSERT;
-            case "delete":
-            case "del":
-                return KeyEvent.VK_DELETE;
-            case "end":
-                return KeyEvent.VK_END;
-            case "pageup":
-                return KeyEvent.VK_PAGE_UP;
-            case "pagedown":
-                return KeyEvent.VK_PAGE_DOWN;
-            case "prntscr":
-            case "printscreen":
-            case "scr":
-            case "screen":
-                return KeyEvent.VK_PRINTSCREEN;
-            case "up":
-                return KeyEvent.VK_UP;
-            case "down":
-                return KeyEvent.VK_DOWN;
-            case "left":
-                return KeyEvent.VK_LEFT;
-            case "right":
-                return KeyEvent.VK_RIGHT;
-            case "esc":
-            case "escape":
-                return KeyEvent.VK_ESCAPE;
-            case "tab":
-                return KeyEvent.VK_TAB;
-            case "caps":
-            case "capslock":
-                return KeyEvent.VK_CAPS_LOCK;
-            case "enter":
-                return KeyEvent.VK_ENTER;
-            case "backspace":
-                return KeyEvent.VK_BACK_SPACE;
-            case "f1":
-                return KeyEvent.VK_F1;
-            case "f2":
-                return KeyEvent.VK_F2;
-            case "f3":
-                return KeyEvent.VK_F3;
-            case "f4":
-                return KeyEvent.VK_F4;
-            case "f5":
-                return KeyEvent.VK_F5;
-            case "f6":
-                return KeyEvent.VK_F6;
-            case "f7":
-                return KeyEvent.VK_F7;
-            case "f8":
-                return KeyEvent.VK_F8;
-            case "f9":
-                return KeyEvent.VK_F9;
-            case "f10":
-                return KeyEvent.VK_F10;
-            case "f11":
-                return KeyEvent.VK_F11;
-            case "f12":
-                return KeyEvent.VK_F12;
-        }
-
-        if (str.length() == 1) {
-            char ch = str.charAt(0);
-
-            if (Character.isLetterOrDigit(ch)) {
-                return KeyEvent.getExtendedKeyCodeForChar(ch);
-            }
-        }
-
-        return -1;
-    }
 
     public static void sendEmbed(MessageChannel channel, User user, String command, String title, String description, Consumer<Message> callback) {
         EmbedBuilder builder = new EmbedBuilder();
