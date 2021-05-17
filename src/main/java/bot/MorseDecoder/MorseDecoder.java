@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Scanner;
 
 /**
@@ -17,13 +18,12 @@ import java.util.Scanner;
 
 public class MorseDecoder {
 
-   public static void MorseDecoder() throws FileNotFoundException{
+   public static String MorseDecoder(String input) throws FileNotFoundException{
    System.out.println("fuck");
    		MorseTree<String> morseTree = loadTree(new File("lib/morsecode.txt"));
-		File inputFile = new File(promptFilename("Enter an input filename:", true));
-		File outputFile = new File(promptFilename("Enter an output filename:", false));
-		decode(morseTree, inputFile, outputFile);
+		return decode(morseTree, input);
       }
+
 
 
 	/**
@@ -80,23 +80,20 @@ public class MorseDecoder {
 	 * @param outputFile location to save decoded output
 	 * @throws FileNotFoundException
 	 */
-	private static void decode(MorseTree<String> morseTree, File inputFile, File outputFile) throws FileNotFoundException{
-		Scanner scanner = null;
-		try{
-			scanner = new Scanner(inputFile);
-			String line;
+	private static String decode(MorseTree<String> morseTree, String input){
 			ArrayList<String> decodedLines = new ArrayList<String>();
-			while (scanner.hasNextLine()){
-				line = scanner.nextLine().toUpperCase();
+			String[] values = input.split(" ");
+			System.out.println(Arrays.asList(values));
 				String decodedLine = "";
-				for (String encodedCharacter : line.split(" ")){
-					if (encodedCharacter.equals("|")){
-						decodedLine += " ";
+				for (int i = 0; i<values.length; i++){
+					//System.out.println(encodedCharacter);
+					if (values[i].equals("|")){
+						decodedLine = decodedLine + " ";
 					}
-					else if (encodedCharacter.length() > 0){
-						String decodedCharacter = morseTree.decode(encodedCharacter);
+					else if (values[i].length() > 0){
+						String decodedCharacter = morseTree.decode(values[i]);
 						if (decodedCharacter == null){
-							System.out.println("Warning: Skipping character "+encodedCharacter);
+							System.out.println("Warning: Skipping character "+values[i]);
 						}
 						else{
 							decodedLine += decodedCharacter;
@@ -104,14 +101,7 @@ public class MorseDecoder {
 					}
 				}
 				decodedLines.add(decodedLine);
-			}
-			output(decodedLines, outputFile);
-		}
-		finally {
-			if (scanner != null) {
-				scanner.close();
-			}
-		}
+			return output(decodedLines);
 	}
 
 	/**
@@ -120,17 +110,13 @@ public class MorseDecoder {
 	 * @param outputFile location of file to be written to
 	 * @throws FileNotFoundException
 	 */
-	private static void output(ArrayList<String> encodedLines, File outputFile) throws FileNotFoundException {
-		PrintWriter pw = null;
-		try{
-			pw = new PrintWriter(outputFile);
+	private static String output(ArrayList<String> encodedLines) {
+		String output = "";
 			for (String encodedLine : encodedLines){
-				pw.println(encodedLine);
+				output = output + encodedLine;
 			}
-		}
-		finally{
-			pw.close();
-		}
+		return output;
+
 	}
 
 }
