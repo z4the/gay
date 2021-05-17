@@ -85,6 +85,7 @@ public class MorseTree<E extends Comparable<E>> {
 	 * @return character represented by morse code
 	 */
 	public String decode(String code){
+		//System.out.println(code);
 		Node current = root;
 		boolean exists = true;
 		for (int i=0; (i<code.length() && exists); i++){
